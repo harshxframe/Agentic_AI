@@ -6,11 +6,11 @@ from langchain_qdrant import QdrantVectorStore
 
 print("Program is now started....")
 # Take the pdf
-pdf_path = Path(__file__).parent / "test.pdf"
+pdf_path = Path(__file__).parent / "indainconstitution.pdf"
 
 # load this file
 loader = PyPDFLoader(file_path=pdf_path)
-docs = loader.load()   #give a page by page
+docs = loader.load()   #give a page by page text
 
 # Split into chunks
 text_splitter = RecursiveCharacterTextSplitter(
@@ -28,7 +28,7 @@ vector_store = QdrantVectorStore.from_documents(
     documents=chunks,
     embedding=embeddings_model,
     url="http://localhost:6333/",
-    collection_name="learning_rag",
+    collection_name="indianConstitution",
 )
 
 print("Indexing of documents done.....!")
