@@ -18,7 +18,7 @@ def main(prompt):
     messages=[
         {
             "role": "system",
-            "content":"You are Maths expert, Here to answer only answer only Maths related questions, When someone ask anything if it not related to maths say them no in human friendly way."
+            "content":"You are an intelligent AI assistant."
         },
         {
             "role": "user",

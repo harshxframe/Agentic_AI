@@ -17,8 +17,6 @@ embeddings_model = OllamaEmbeddings(model="nomic-embed-text")
 print("Model initialization done.")
 
 
-
-
 print("DB operations begin...")
 vectorDB = QdrantVectorStore.from_existing_collection(
     embedding=embeddings_model,
